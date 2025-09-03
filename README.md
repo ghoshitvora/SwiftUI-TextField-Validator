@@ -17,17 +17,17 @@ This is a reusable **SwiftUI ViewModifier** for adding common validation to Text
 
 **Validation Example**
 
-@State private var txtEmail: String = ""
-@State private var isValidEmail: Bool = false
+    @State private var txtEmail: String = ""
+    @State private var isValidEmail: Bool = false
 
-TextField("Enter email", text: $txtEmail)
-        .padding(.horizontal, 12)
-        .frame(height: 50)
-        .background(
-            RoundedRectangle(cornerRadius: 8)
-                .stroke(Color.black, lineWidth: 1)
-        )
-        .validator(text: $txtEmail, isValid: $isValidEmail, validationType: .email, validationMode: .onTextChange)
+                TextField("Enter email", text: $txtEmail)
+                    .padding(.horizontal, 12)
+                    .frame(height: 50)
+                    .background(
+                        RoundedRectangle(cornerRadius: 8)
+                            .stroke(Color.black, lineWidth: 1)
+                    )
+                    .validator(text: $txtEmail, isValid: $isValidEmail, validationType: .email, validationMode: .onTextChange)
 
 ## ValidationType Enum
 
@@ -44,7 +44,6 @@ The `validationType` enum specifies the type of validation to perform.
 The `validationMode` enum determines when the validation logic is executed.
 
 - `.onTextChange`: Validation runs automatically as the text changes.
-
 - `.onDemand`: Validation is triggered manually by toggling the trigger binding.
 
 ## License
