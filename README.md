@@ -20,14 +20,14 @@ This is a reusable **SwiftUI ViewModifier** for adding common validation to Text
     @State private var txtEmail: String = ""
     @State private var isValidEmail: Bool = false
 
-                TextField("Enter email", text: $txtEmail)
-                    .padding(.horizontal, 12)
-                    .frame(height: 50)
-                    .background(
-                        RoundedRectangle(cornerRadius: 8)
-                            .stroke(Color.black, lineWidth: 1)
-                    )
-                    .validator(text: $txtEmail, isValid: $isValidEmail, validationType: .email, validationMode: .onTextChange)
+    TextField("Enter email", text: $txtEmail)
+        .padding(.horizontal, 12)
+        .frame(height: 50)
+        .background(
+            RoundedRectangle(cornerRadius: 8)
+                .stroke(Color.black, lineWidth: 1)
+        )
+        .validator(text: $txtEmail, isValid: $isValidEmail, validationType: .email, validationMode: .onTextChange)
 
 ## ValidationType Enum
 
