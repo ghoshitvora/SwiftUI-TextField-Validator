@@ -12,8 +12,8 @@ This is a reusable **SwiftUI ViewModifier** for adding common validation to Text
 
 ## Usage
 1. Add the `ValidatorModifier.swift` file to your Xcode project.
-
 2. Use the `.validator()` modifier on your TextField and provide the necessary bindings and parameters.
+
 
 **Validation Example**
 
