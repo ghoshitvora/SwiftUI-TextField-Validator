@@ -30,8 +30,8 @@ struct ContentView: View {
                     )
                     .validator(text: $txtEmail, isValid: $isValidEmail, validationType: .email, validationMode: .onTextChange)
                 
-                    Text("Please enter valid email")
-                        .foregroundColor(.red)
+                Text(isValidEmail ? "valid email" : "Please enter valid email")
+                    .foregroundColor(isValidEmail ? .green : .red)
                         .padding(.top, 10)
             }
         }
