@@ -27,7 +27,11 @@ This is a reusable **SwiftUI ViewModifier** for adding common validation to Text
             RoundedRectangle(cornerRadius: 8)
                 .stroke(Color.black, lineWidth: 1)
         )
-        .validator(text: $txtEmail, isValid: $isValidEmail, validationType: .email, validationMode: .onTextChange)
+        .validator(
+                text: $txtEmail,
+                isValid: $isValidEmail,
+                validationType: .email,
+                validationMode: .onTextChange)
 
 ## ValidationType Enum
 

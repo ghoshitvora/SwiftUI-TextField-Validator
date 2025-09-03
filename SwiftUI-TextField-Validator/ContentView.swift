@@ -28,7 +28,11 @@ struct ContentView: View {
                         RoundedRectangle(cornerRadius: 8)
                             .stroke(Color.black, lineWidth: 1)
                     )
-                    .validator(text: $txtEmail, isValid: $isValidEmail, validationType: .email, validationMode: .onTextChange)
+                    .validator(
+                        text: $txtEmail,
+                        isValid: $isValidEmail,
+                        validationType: .email,
+                        validationMode: .onTextChange)
                 
                 Text(isValidEmail ? "valid email" : "Please enter valid email")
                     .foregroundColor(isValidEmail ? .green : .red)
